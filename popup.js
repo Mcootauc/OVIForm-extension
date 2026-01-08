@@ -94,6 +94,13 @@ function fillFormOnPage(data) {
     const zipCodeInput = document.getElementById('txtPostcode');
     const countryInput = document.getElementById('txtCountry');
     const mobileNumberInput = document.getElementById('txtTelephone3');
+    const secondaryFirstNameInput = document.getElementById(
+        'secondary_first_name'
+    );
+    const secondaryLastNameInput = document.getElementById(
+        'secondary_last_name'
+    );
+    const secondaryPhoneInput = document.getElementById('secondary_telephone1');
     dispatchInputEvent(firstNameInput, data.first_name);
     dispatchInputEvent(lastNameInput, data.last_name);
     dispatchInputEvent(emailInput, data.email);
@@ -103,6 +110,9 @@ function fillFormOnPage(data) {
     dispatchInputEvent(zipCodeInput, data.zip_code);
     dispatchInputEvent(countryInput, data.country);
     dispatchInputEvent(mobileNumberInput, data.phone);
+    dispatchInputEvent(secondaryFirstNameInput, data.secondary_first_name);
+    dispatchInputEvent(secondaryLastNameInput, data.secondary_last_name);
+    dispatchInputEvent(secondaryPhoneInput, data.secondary_phone);
 
     // Update the old client info
     const oldCityInput = document.getElementsByName('city')[0];
